@@ -6,8 +6,15 @@ function Movie(props) {
   return (
     <div>
         <div className='movie'>
-            <div className='movie-title'>{props.movie.title}</div>
-            <div className='movie-year'>{props.movie.year}</div>
+            <div className='movie-title'>
+                {props.movie.title}
+                <span className='movie-year' >
+                    ({props.movie.year})
+                </span>
+            </div>
+            <div >
+                <button onClick={()=>{props.removeMovie(props.movie.id)}}>삭제</button>
+            </div>
         </div>
     </div>
   );
