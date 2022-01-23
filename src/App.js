@@ -9,6 +9,8 @@ import {
     Route,
      
 } from 'react-router-dom';
+
+import Users from './pages/Users';
 function App() {
 
 
@@ -61,7 +63,10 @@ const addMovie = (movie) =>{
         {renderMovies} 
      
       </Route>
-      <Route path='/users' exact></Route>
+      <Route path='/users' exact>
+        <Users/>
+
+      </Route>
       <Route path='/' exact></Route>
    
       
