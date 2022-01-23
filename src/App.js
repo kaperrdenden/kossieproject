@@ -3,6 +3,12 @@ import Counter from './components/Counter';
 import Movie from './components/Movie';
 import MovieForm from './components/MovieForm';
 import Navbar from './components/Navbar';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+     
+} from 'react-router-dom';
 function App() {
 
 
@@ -45,21 +51,24 @@ const addMovie = (movie) =>{
 };
 
   return (
-    <div className="App">
+    <Router>
+     <div className="App">
       <Navbar />
+     
+      <Route path='/movies'>
       <h1>Movie List</h1>
-
-      <MovieForm
-        addMovie={addMovie}
-       
-        />
-     {
-       renderMovies
-     }
+        <MovieForm addMovie={addMovie} />
+        {renderMovies} 
+     
+      </Route>
+      <Route path='/users'></Route>
+      <Route path='/'></Route>
    
- 
+      
+   
+     </div>
+  </Router>
   
-    </div>
   );
 }
 
