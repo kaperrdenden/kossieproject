@@ -2,22 +2,27 @@ import React from "react";
 import UserList from "../components/UserList";
 import axios from "axios";
 import { useEffect, useState } from "react/cjs/react.development";
-
+import Spinner from "../components/Spinner";
 const Users = ()=>{
     const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
         axios.get('https://jsonplaceholder.typicode.com/users')
         .then( response =>{
-           
             setUsers(response.data);
+            setLoading(false);
         })
     },[]);
     
     return(
         <>
             <h1>Users</h1>
-            <UserList users={users}/>
+               {loading===true 
+                ?  <Spinner/>
+                : <UserList users={users}/>
+               }
+            
         </>
     )
 }
