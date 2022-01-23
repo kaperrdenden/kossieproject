@@ -56,19 +56,19 @@ const addMovie = (movie) =>{
     <Router>
      <div className="App">
       <Navbar />
-     
-      <Route path='/movies' exact>
-      <h1>Movie List</h1>
-        <MovieForm addMovie={addMovie} />
-        {renderMovies} 
-     
-      </Route>
-      <Route path='/users' exact>
-        <Users/>
+      <div className='container'>
+        <Route path='/movies' exact>
+        <h1>Movie List</h1>
+          <MovieForm addMovie={addMovie} />
+          {renderMovies} 
+      
+        </Route>
+        <Route path='/users' exact>
+          <Users/>
 
-      </Route>
-      <Route path='/' exact></Route>
-   
+        </Route>
+        <Route path='/' exact></Route>
+       </div>
       
    
      </div>
