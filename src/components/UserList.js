@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import {Link } from 'react-router-dom';
 import { useEffect, useState } from "react/cjs/react.development";
 
 const UserList = ({users})=>{
@@ -15,7 +16,7 @@ const UserList = ({users})=>{
                     key={user.id}
                 >
                     <div className="card-body p-3">
-                        {user.name}
+                    <Link to={`/users/${user.id}`}>    {user.name}</Link>
                     </div>
             </div>)
             })}
