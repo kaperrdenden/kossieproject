@@ -5,6 +5,7 @@ import MovieForm from './components/MovieForm';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Movies from './pages/Movies';
+import routes from './routes';
 
 
 import {
@@ -31,17 +32,23 @@ function App() {
      <div className="App">
       <Navbar />
       <div className='container'>
+        {/* {routes.map(route=>{
+          return(
+            <Route key={route.path} path={route.path} exact>
+                <route.component />
+            </Route>
+          )
+        })} */}
+        <Route path='/' exact>
+          <Home />
+        </Route>
         <Route path='/movies' exact>
-         <Movies />
-      
+          <Movies />
         </Route>
         <Route path='/users' exact>
-          <Users/>
-
+          <Users />
         </Route>
-        <Route path='/' exact>
-            <Home />
-        </Route>
+    
        </div>
       
    
