@@ -32,14 +32,14 @@ function App() {
      <div className="App">
       <Navbar />
       <div className='container'>
-        {/* {routes.map(route=>{
+        {routes.map(route=>{
           return(
             <Route key={route.path} path={route.path} exact>
                 <route.component />
             </Route>
           )
-        })} */}
-        <Route path='/' exact>
+        })}
+        {/* <Route path='/' exact>
           <Home />
         </Route>
         <Route path='/movies' exact>
@@ -47,7 +47,7 @@ function App() {
         </Route>
         <Route path='/users' exact>
           <Users />
-        </Route>
+        </Route> */}
     
        </div>
       
