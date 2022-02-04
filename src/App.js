@@ -21,7 +21,7 @@ function App() {
 
 // const [movieTitle,setMovieTitle] = useState('');
 // const [movieYear,setMovieYear] = useState('');
-
+// state를 따로 빼놓지 않고 관리했을 경우
 
 
   
