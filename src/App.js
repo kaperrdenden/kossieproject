@@ -17,6 +17,7 @@ function App() {
 
 // return 내부에 있는 것들은 JSX. html, js도 아니다.        
 
+  const [text, setText] = useState('Dong');
   const onSubmit = ()=>{
     alert('submitted');
   }
@@ -24,12 +25,27 @@ function App() {
     if(e.keyCode === 13){
 
       alert('submitted');
+ 
     }
   }
+
+
+
+const updateText = () => {
+  setText("hello");
+  console.log(text);
+}
+
   return (
     <div className='App'>
       <input onKeyUp={onKeyUp}/>
       <button onClick={onSubmit}>Submit</button>
+
+      <br />
+      <br />
+
+    <span>{text}</span>
+    <button onClick={ updateText }>Update</button>
     </div>
   );
 }
