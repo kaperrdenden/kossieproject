@@ -26,6 +26,11 @@ function App() {
 
   return (
     <div className='App'>
+      <form onSubmit={()=>{
+
+      }}>
+
+      
       <input 
         placeholder='Username' 
         value={username} 
@@ -40,9 +45,9 @@ function App() {
         }}
         />
          <br />
-      <button onClick={onSubmit}>Submit</button>
+      <button type='submit'>Login</button>
 
-     
+      </form>
     </div>
   );
 }
