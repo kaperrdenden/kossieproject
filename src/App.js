@@ -17,21 +17,17 @@ function App() {
 
 // return 내부에 있는 것들은 JSX. html, js도 아니다.        
 
-  const [text, setText] = useState('Dong');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const onSubmit = ()=>{
     alert('submitted');
   }
  
 
-
-const updateText = () => {
-  setText("hello");
-  console.log(text);
-}
-
   return (
     <div className='App'>
-      <input/>
+      <input placeholder='Username'/> <br />
+      <input placeholder='Password'/> <br />
       <button onClick={onSubmit}>Submit</button>
 
      
