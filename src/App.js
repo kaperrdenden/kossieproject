@@ -16,6 +16,14 @@ function App() {
     {title: 'i am dongjae2', year: 2002},
     {title: 'i am dongjae3', year: 2003},
   ]
+  const renderMovies = movies.map((movie,i)=>
+    ( 
+    <div className='movie' key={i}>
+      <div className='movie-title'>{movie.title}</div>
+      <div className='movie-year'>{movie.year}</div>
+    </div>
+  )
+  )
 
   // const [condition, setCondition] = useState(false);
   // const toggle = () => {
@@ -45,10 +53,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Movie list</h1>
-      <div className='movie'>
-        <div className='movie-title'>{movies[0].title}</div>
-        <div className='movie-year'>{movies[0].year}</div>
-      </div>
+      {renderMovies}
       {/* <h1>Dongjaeda</h1>
       <div>
         {renderCondition}
