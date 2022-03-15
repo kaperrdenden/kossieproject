@@ -19,8 +19,8 @@ function App() {
     console.log(condition)
   },[condition])
   const renderCondition = condition 
-  ? <div>True</div>
-  : <div>False</div>
+  ? 'true'
+  : 'False'
   // const [buttonName, setButtonname]=useState('클릭');
   // const clickButton = ()=>{
   //   setButtonname('click');
@@ -38,7 +38,10 @@ function App() {
   return (
     <div className='App'>
       <h1>Dongjaeda</h1>
-      {renderCondition}
+      <div>
+        {renderCondition}
+      </div>
+    
       <button onClick={toggle}>Toggle</button>
       {/* <form onSubmit={(e)=>{
         e.preventDefault();
