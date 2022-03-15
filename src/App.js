@@ -21,14 +21,7 @@ function App() {
   const onSubmit = ()=>{
     alert('submitted');
   }
-  const onKeyUp = (e)=>{
-    if(e.keyCode === 13){
-
-      alert('submitted');
  
-    }
-  }
-
 
 
 const updateText = () => {
@@ -38,14 +31,10 @@ const updateText = () => {
 
   return (
     <div className='App'>
-      <input onKeyUp={onKeyUp}/>
+      <input/>
       <button onClick={onSubmit}>Submit</button>
 
-      <br />
-      <br />
-
-    <span>{text}</span>
-    <button onClick={ updateText }>Update</button>
+     
     </div>
   );
 }
