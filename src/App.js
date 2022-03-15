@@ -26,8 +26,8 @@ function App() {
 
   return (
     <div className='App'>
-      <form onSubmit={()=>{
-
+      <form onSubmit={(e)=>{
+        e.preventDefault();
       }}>
 
       
