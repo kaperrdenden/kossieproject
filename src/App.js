@@ -18,6 +18,9 @@ function App() {
   useEffect(()=>{
     console.log(condition)
   },[condition])
+  const renderCondition = condition 
+  ? <div>True</div>
+  : <div>False</div>
   // const [buttonName, setButtonname]=useState('클릭');
   // const clickButton = ()=>{
   //   setButtonname('click');
@@ -35,8 +38,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Dongjaeda</h1>
-      <div>True</div>
-      <div>false</div>
+      {renderCondition}
       <button onClick={toggle}>Toggle</button>
       {/* <form onSubmit={(e)=>{
         e.preventDefault();
