@@ -11,16 +11,23 @@ import {
 
 function App() {
 
-  const [condition, setCondition] = useState(false);
-  const toggle = () => {
-    setCondition(!condition);
-  }
-  useEffect(()=>{
-    console.log(condition)
-  },[condition])
-  const renderCondition = condition 
-  ? 'true'
-  : 'False'
+  const movies = [
+    {title: 'i am dongjae', year: 2001},
+    {title: 'i am dongjae2', year: 2002},
+    {title: 'i am dongjae3', year: 2003},
+  ]
+
+  // const [condition, setCondition] = useState(false);
+  // const toggle = () => {
+  //   setCondition(!condition);
+  // }
+  // useEffect(()=>{
+  //   console.log(condition)
+  // },[condition])
+  // const renderCondition = condition 
+  // ? 'true'
+  // : 'False'
+
   // const [buttonName, setButtonname]=useState('클릭');
   // const clickButton = ()=>{
   //   setButtonname('click');
@@ -37,12 +44,17 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Dongjaeda</h1>
+      <h1>Movie list</h1>
+      <div className='movie'>
+        <div className='movie-title'>{movies[0].title}</div>
+        <div className='movie-year'>{movies[0].year}</div>
+      </div>
+      {/* <h1>Dongjaeda</h1>
       <div>
         {renderCondition}
       </div>
     
-      <button onClick={toggle}>Toggle</button>
+      <button onClick={toggle}>Toggle</button> */}
       {/* <form onSubmit={(e)=>{
         e.preventDefault();
       }}>
