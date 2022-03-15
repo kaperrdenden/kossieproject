@@ -1,10 +1,10 @@
 import React from "react";
 
-const Movie = (props) => {
+const Movie = ({movie}) => {
     return(
       <div className='movie'>
-        <div className='movie-title'>{props.movie.title}</div>
-        <div className='movie-year'>{props.movie.year}</div>
+        <div className='movie-title'>{movie.title}</div>
+        <div className='movie-year'>{movie.year}</div>
       </div>
     )
 }
