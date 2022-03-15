@@ -10,23 +10,36 @@ import {
 
 
 function App() {
-
+const [count, setCount] = useState(0);
+const [dong, setDong] = useState(0);
 // const [movieTitle,setMovieTitle] = useState('');
 // const [movieYear,setMovieYear] = useState('');
 // state를 따로 빼놓지 않고 관리했을 경우
 
 // return 내부에 있는 것들은 JSX. html, js도 아니다.        
 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const onSubmit = ()=>{
-    alert('submitted');
-  }
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
+  useEffect(()=>{
+    console.log("first");
+  },[])
+  // const [username, setUsername] = useState('');
+  // const [password, setPassword] = useState('');
+  // const onSubmit = ()=>{
+  //   alert('submitted');
+  // }
  
-
+const increment = () => {
+  setCount(count+1);
+}
   return (
     <div className='App'>
-      <form onSubmit={(e)=>{
+      <button onClick={increment}>Click1</button>
+      <button onClick={() => {
+        setDong(dong+1);
+      }}>Click2</button>
+      {/* <form onSubmit={(e)=>{
         e.preventDefault();
       }}>
 
@@ -47,7 +60,9 @@ function App() {
          <br />
       <button type='submit'>Login</button>
 
-      </form>
+      </form> */}
+
+
     </div>
   );
 }
