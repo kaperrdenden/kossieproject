@@ -12,12 +12,15 @@ import {
 function App() {
   const [movieTitle, setMovieTitle] = useState('');
   const [movieYear, setMovieYear] = useState('');
-  const movies = [
+  const [movies, setMovies] = useState( [
     {title: 'i am dongjae', year: 2001},
     {title: 'i am dongjae2', year: 2002},
     {title: 'i am dongjae3', year: 2003},
-  ]
-  
+  ]);
+  useEffect(()=>{
+    console.log("render");
+  })
+
   const renderMovies = movies.map(movie =>{
     return(
       <Movie movie={movie} key={movie.title} />
@@ -47,12 +50,16 @@ function App() {
   // const onSubmit = ()=>{
   //   alert('submitted');
   // }
-
+const addMovie = (e) =>{
+  e.preventDefault();
+  
+  console.log(movieTitle,movieYear);
+}
   return (
     <div className='App'>
       <h1>Movie list</h1>
     
-      <form>
+      <form onSubmit={addMovie}>
         <input 
           type="text"
           value={movieTitle}
