@@ -26,8 +26,20 @@ function App() {
 
   return (
     <div className='App'>
-      <input placeholder='Username'/> <br />
-      <input placeholder='Password'/> <br />
+      <input 
+        placeholder='Username' 
+        value={username} 
+        onChange={(e)=>{
+          setUsername(e.target.value);
+        }}/> <br />
+      <input 
+        placeholder='Password' 
+        value={password}
+        onChange={(e)=>{
+          setPassword(e.target.value);
+        }}
+        />
+         <br />
       <button onClick={onSubmit}>Submit</button>
 
      
