@@ -10,7 +10,8 @@ import {
 
 
 function App() {
-
+  const [movieTitle, setMovieTitle] = useState('');
+  const [movieYear, setMovieYear] = useState('');
   const movies = [
     {title: 'i am dongjae', year: 2001},
     {title: 'i am dongjae2', year: 2002},
@@ -50,6 +51,22 @@ function App() {
   return (
     <div className='App'>
       <h1>Movie list</h1>
+    
+      <form>
+        <input 
+          type="text"
+          value={movieTitle}
+          placeholder="영화제목"
+          onChange={e => setMovieTitle(e.target.value)}
+        /><br />
+        <input 
+          type="text" 
+          value={movieYear}
+          placeholder="개봉년도"
+          onChange={e => setMovieYear(e.target.value)}
+        /><br />
+        <button>영화추가</button>
+      </form>
       {renderMovies}
       {/* <h1>Dongjaeda</h1>
       <div>
