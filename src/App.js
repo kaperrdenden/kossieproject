@@ -11,10 +11,17 @@ import {
 
 function App() {
 
-  const [buttonName, setButtonname]=useState('클릭');
-  const clickButton = ()=>{
-    setButtonname('click');
+  const [condition, setCondition] = useState(false);
+  const toggle = () => {
+    setCondition(!condition);
   }
+  useEffect(()=>{
+    console.log(condition)
+  },[condition])
+  // const [buttonName, setButtonname]=useState('클릭');
+  // const clickButton = ()=>{
+  //   setButtonname('click');
+  // }
 // const [movieTitle,setMovieTitle] = useState('');
 // const [movieYear,setMovieYear] = useState('');
 // state를 따로 빼놓지 않고 관리했을 경우
@@ -27,10 +34,10 @@ function App() {
 
   return (
     <div className='App'>
-      <Counter click="click1" />
-      <Counter click={buttonName} />
-      <Counter click="" />
-      <button onClick={clickButton}>Click</button>
+      <h1>Dongjaeda</h1>
+      <div>True</div>
+      <div>false</div>
+      <button onClick={toggle}>Toggle</button>
       {/* <form onSubmit={(e)=>{
         e.preventDefault();
       }}>
