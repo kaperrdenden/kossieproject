@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Counter from './components/Counter';
-
+import Movie from './components/Movie';
 import {
     BrowserRouter as Router,
     Switch,
@@ -16,15 +16,12 @@ function App() {
     {title: 'i am dongjae2', year: 2002},
     {title: 'i am dongjae3', year: 2003},
   ]
-  const renderMovies = movies.map((movie,i)=>
-    ( 
-    <div className='movie' key={i}>
-      <div className='movie-title'>{movie.title}</div>
-      <div className='movie-year'>{movie.year}</div>
-    </div>
-  )
-  )
-
+  
+  const renderMovies = movies.map(movie =>{
+    return(
+      <Movie movie={movie} key={movie.title} />
+    )
+  })
   // const [condition, setCondition] = useState(false);
   // const toggle = () => {
   //   setCondition(!condition);
