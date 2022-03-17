@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Counter from './components/Counter';
 import Movie from './components/Movie';
+import MovieForm from './components/MovieForm';
 import {
     BrowserRouter as Router,
     Switch,
@@ -66,21 +67,7 @@ const addMovie = (e) =>{
     <div className='App'>
       <h1>Movie list</h1>
     
-      <form onSubmit={addMovie}>
-        <input 
-          type="text"
-          value={movieTitle}
-          placeholder="영화제목"
-          onChange={e => setMovieTitle(e.target.value)}
-        /><br />
-        <input 
-          type="text" 
-          value={movieYear}
-          placeholder="개봉년도"
-          onChange={e => setMovieYear(e.target.value)}
-        /><br />
-        <button>영화추가</button>
-      </form>
+    <MovieForm />
       {renderMovies}
       {/* <h1>Dongjaeda</h1>
       <div>
