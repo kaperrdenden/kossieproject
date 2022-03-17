@@ -12,7 +12,7 @@ const Movie = ({movie, removeMovie}) => {
         </div>
         <div>
             <button onClick={()=> {
-                removeMovie(movie.title);
+                removeMovie(movie.id);
             }}>삭제</button>
         </div>
       </div>

@@ -13,6 +13,8 @@ const resetForm = () => {
 const onSubmit = (e) =>{
   e.preventDefault();
   props.addMovie({
+      id:Date.now(),
+    //   Date.now()로 임의의 유니크한 id만들기
       title:movieTitle,
         year:movieYear,
   })

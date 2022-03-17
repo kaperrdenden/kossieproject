@@ -18,11 +18,11 @@ function App() {
   useEffect(()=>{
     console.log("render");
   })
-  const removeMovie = (movieTitle) =>{
+  const removeMovie = (id) =>{
     const coppiedArray = [...movies];
 
     for (let i=0; i<movies.length; i++){
-      if (movies[i].title==movieTitle){
+      if (movies[i].id==id){
         coppiedArray.splice(i, 1);
       }
     }
