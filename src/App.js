@@ -19,14 +19,18 @@ function App() {
     console.log("render");
   })
   const removeMovie = (id) =>{
-    const coppiedArray = [...movies];
+    setMovies( movies.filter((movie)=>{
+      return id !== movie.id;
+    }));
+   
+    // const coppiedArray = [...movies];
 
-    for (let i=0; i<movies.length; i++){
-      if (movies[i].id==id){
-        coppiedArray.splice(i, 1);
-      }
-    }
-    setMovies(coppiedArray);
+    // for (let i=0; i<movies.length; i++){
+    //   if (movies[i].id==id){
+    //     coppiedArray.splice(i, 1);
+    //   }
+    // }
+    // setMovies(coppiedArray);
   }
   const renderMovies = movies.length ? movies.map(movie =>{
     return(
