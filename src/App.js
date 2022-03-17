@@ -33,7 +33,7 @@ function App() {
       <Movie 
           movie={movie}
           removeMovie={removeMovie}
-          key={movie.title} />
+          key={movie.id} />
     )
   }) 
   : '추가된 영화 없음';
