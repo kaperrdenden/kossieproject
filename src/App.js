@@ -67,7 +67,7 @@ const addMovie = (e) =>{
     <div className='App'>
       <h1>Movie list</h1>
     
-    <MovieForm  setMovies={setMovies}/>
+    <MovieForm setMovies={setMovies}/>
       {renderMovies}
       {/* <h1>Dongjaeda</h1>
       <div>
