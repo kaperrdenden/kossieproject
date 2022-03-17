@@ -20,10 +20,22 @@ function App() {
   useEffect(()=>{
     console.log("render");
   })
+  const removeMovie = (movieTitle) =>{
+    const coppiedArray = [...movies];
 
+    for (let i=0; i<movies.length; i++){
+      if (movies[i].title==movieTitle){
+        coppiedArray.splice(i, 1);
+      }
+    }
+    setMovies(coppiedArray);
+  }
   const renderMovies = movies.map(movie =>{
     return(
-      <Movie movie={movie} key={movie.title} />
+      <Movie 
+          movie={movie}
+          removeMovie={removeMovie}
+          key={movie.title} />
     )
   })
   // const [condition, setCondition] = useState(false);
