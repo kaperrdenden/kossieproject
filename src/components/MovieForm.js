@@ -5,23 +5,25 @@ const MovieForm = () => {
     const [movieTitle, setMovieTitle] = useState('');
   const [movieYear, setMovieYear] = useState('');
     
-
+const resetForm = () => {
+    setMovieTitle('');
+    setMovieYear('');
+};
 
 const onSubmit = (e) =>{
   e.preventDefault();
-  setMovies([
-    ...movies,
-    {
-      title: movieTitle,
-      year: movieYear,
-    }])
-    setMovieTitle('');
-    setMovieYear('');
+//   setMovies([
+//     ...movies,
+//     {
+//       title: movieTitle,
+//       year: movieYear,
+//     }])
+ resetForm();
   console.log(movieTitle,movieYear);
 }
   return (
     <div className='App'>
-      <h1>Movie list</h1>
+     
     
       <form onSubmit={onSubmit}>
         <input 
