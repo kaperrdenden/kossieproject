@@ -13,9 +13,7 @@ import {
 function App() {
  
   const [movies, setMovies] = useState( [
-    {title: 'i am dongjae', year: 2001},
-    {title: 'i am dongjae2', year: 2002},
-    {title: 'i am dongjae3', year: 2003},
+ 
   ]);
   useEffect(()=>{
     console.log("render");
