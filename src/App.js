@@ -57,8 +57,9 @@ const addMovie = (e) =>{
     {
       title: movieTitle,
       year: movieYear,
-    }
-  ])
+    }])
+    setMovieTitle('');
+    setMovieYear('');
   console.log(movieTitle,movieYear);
 }
   return (
