@@ -28,14 +28,15 @@ function App() {
     }
     setMovies(coppiedArray);
   }
-  const renderMovies = movies.map(movie =>{
+  const renderMovies = movies.length ? movies.map(movie =>{
     return(
       <Movie 
           movie={movie}
           removeMovie={removeMovie}
           key={movie.title} />
     )
-  })
+  }) 
+  : '추가된 영화 없음';
   // const [condition, setCondition] = useState(false);
   // const toggle = () => {
   //   setCondition(!condition);
