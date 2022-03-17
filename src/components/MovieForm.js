@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const MovieForm = () => {
+const MovieForm = (props) => {
     const [movieTitle, setMovieTitle] = useState('');
   const [movieYear, setMovieYear] = useState('');
     
@@ -12,6 +12,10 @@ const resetForm = () => {
 
 const onSubmit = (e) =>{
   e.preventDefault();
+  props.addMovie({
+      title:movieTitle,
+        year:movieYear,
+  })
 //   setMovies([
 //     ...movies,
 //     {

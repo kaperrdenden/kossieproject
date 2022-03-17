@@ -11,8 +11,7 @@ import {
 
 
 function App() {
-  const [movieTitle, setMovieTitle] = useState('');
-  const [movieYear, setMovieYear] = useState('');
+ 
   const [movies, setMovies] = useState( [
     {title: 'i am dongjae', year: 2001},
     {title: 'i am dongjae2', year: 2002},
@@ -51,23 +50,20 @@ function App() {
   // const onSubmit = ()=>{
   //   alert('submitted');
   // }
-const addMovie = (e) =>{
-  e.preventDefault();
+const addMovie = (movie) =>{
+  // e.preventDefault();
   setMovies([
-    ...movies,
-    {
-      title: movieTitle,
-      year: movieYear,
-    }])
-    setMovieTitle('');
-    setMovieYear('');
-  console.log(movieTitle,movieYear);
+    ...movies, 
+    movie,
+  ])
+    
+  // console.log(movieTitle,movieYear);
 }
   return (
     <div className='App'>
       <h1>Movie list</h1>
     
-    <MovieForm setMovies={setMovies}/>
+    <MovieForm addMovie={addMovie}/>
       {renderMovies}
       {/* <h1>Dongjaeda</h1>
       <div>
