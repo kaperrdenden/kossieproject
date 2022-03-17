@@ -52,7 +52,13 @@ function App() {
   // }
 const addMovie = (e) =>{
   e.preventDefault();
-  
+  setMovies([
+    ...movies,
+    {
+      title: movieTitle,
+      year: movieYear,
+    }
+  ])
   console.log(movieTitle,movieYear);
 }
   return (
