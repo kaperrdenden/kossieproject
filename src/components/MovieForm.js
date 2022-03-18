@@ -24,6 +24,11 @@ const validateForm = () => {
     return validated;
 };
 
+const resetErrors = () => {
+    setTitleError('');
+    setYearError('');
+}
+
 const onSubmit = (e) =>{
   e.preventDefault();
   if (validateForm()){
@@ -33,6 +38,7 @@ const onSubmit = (e) =>{
         title:movieTitle,
           year:movieYear,
     })
+    resetErrors();
   }
  
 //   setMovies([
