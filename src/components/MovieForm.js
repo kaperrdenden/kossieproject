@@ -4,20 +4,37 @@ import React, { useState } from "react";
 const MovieForm = (props) => {
     const [movieTitle, setMovieTitle] = useState('');
   const [movieYear, setMovieYear] = useState('');
-    
+    const [titleError, setTitleError] = useState('');
+    const [yearError, setYearError] = useState(''); 
 const resetForm = () => {
     setMovieTitle('');
     setMovieYear('');
 };
 
+const validateForm = () => {
+    let validated = true;
+    if (!movieTitle){
+        setTitleError('영화제목을 넣어주세요');
+        validated = false;
+    }
+    if (!movieYear) {
+        setYearError('개봉년도를 넣어주세요');
+        validated = false;       
+    }
+    return validated;
+};
+
 const onSubmit = (e) =>{
   e.preventDefault();
-  props.addMovie({
-      id:Date.now(),
-    //   Date.now()로 임의의 유니크한 id만들기
-      title:movieTitle,
-        year:movieYear,
-  })
+  if (validateForm()){
+    props.addMovie({
+        id:Date.now(),
+      //   Date.now()로 임의의 유니크한 id만들기
+        title:movieTitle,
+          year:movieYear,
+    })
+  }
+ 
 //   setMovies([
 //     ...movies,
 //     {
