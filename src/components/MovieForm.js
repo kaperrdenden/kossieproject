@@ -55,12 +55,14 @@ const onSubmit = (e) =>{
           placeholder="영화제목"
           onChange={e => setMovieTitle(e.target.value)}
         /><br />
+        <div style={{color: 'red'}}>{titleError}</div>
         <input 
           type="number" 
           value={movieYear}
           placeholder="개봉년도"
           onChange={e => setMovieYear(e.target.value)}
         /><br />
+        <div style={{color: 'red'}}>{yearError}</div>
         <button>영화추가</button>
       </form>
       </div>
