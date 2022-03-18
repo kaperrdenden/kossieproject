@@ -13,6 +13,7 @@ const resetForm = () => {
 
 const validateForm = () => {
     let validated = true;
+    resetErrors();
     if (!movieTitle){
         setTitleError('영화제목을 넣어주세요');
         validated = false;
@@ -39,6 +40,8 @@ const onSubmit = (e) =>{
           year:movieYear,
     })
     resetErrors();
+    resetForm();
+    // 영화가 추가될 때만 reset을할 수있게 한다.
   }
  
 //   setMovies([
@@ -47,7 +50,7 @@ const onSubmit = (e) =>{
 //       title: movieTitle,
 //       year: movieYear,
 //     }])
- resetForm();
+ 
   console.log(movieTitle,movieYear);
 }
   return (
