@@ -22,9 +22,8 @@ function App() {
     setMovies( movies.filter((movie)=>{
       return id !== movie.id;
     }));
-   
+    // d
     // const coppiedArray = [...movies];
-
     // for (let i=0; i<movies.length; i++){
     //   if (movies[i].id==id){
     //     coppiedArray.splice(i, 1);
