@@ -4,6 +4,7 @@ import Movie from './components/Movie';
 import MovieForm from './components/MovieForm';
 import Navbar from './components/Navbar';
 import Users from './components/pages/Users';
+
 import {
     BrowserRouter as Router,
     Switch,
