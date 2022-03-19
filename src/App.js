@@ -83,14 +83,16 @@ const addMovie = (movie) =>{
             <h1>Movie list</h1>
         
             <MovieForm addMovie={addMovie}/>
-            {renderMovies}</Route>
+            {renderMovies}
+          </Route>
+          <Route path="/" exact>
+          
+          <h1>Home</h1>
+        </Route>
           <Route path="/users">
             <h1>users</h1>
           </Route>
-          <Route path="/">
-          
-            <h1>Home</h1>
-          </Route>
+        
         </Switch>
         {/* <h1>Dongjaeda</h1>
         <div>
