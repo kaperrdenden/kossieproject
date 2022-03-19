@@ -78,14 +78,20 @@ const addMovie = (movie) =>{
     <Router>
       <div className='App'>
         <Navbar />
-        <Route path="/movies"> 
-          <h1>Movie list</h1>
-      
-          <MovieForm addMovie={addMovie}/>
-          {renderMovies}</Route>
-        <Route path="/users"></Route>
-        <Route path="/"></Route>
-       
+        <Switch>
+          <Route path="/movies"> 
+            <h1>Movie list</h1>
+        
+            <MovieForm addMovie={addMovie}/>
+            {renderMovies}</Route>
+          <Route path="/users">
+            <h1>users</h1>
+          </Route>
+          <Route path="/">
+          
+            <h1>Home</h1>
+          </Route>
+        </Switch>
         {/* <h1>Dongjaeda</h1>
         <div>
           {renderCondition}
