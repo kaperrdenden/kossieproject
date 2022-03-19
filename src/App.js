@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Counter from './components/Counter';
 import Movie from './components/Movie';
 import MovieForm from './components/MovieForm';
+import Navbar from './components/Nav';
 import {
     BrowserRouter as Router,
     Switch,
@@ -75,6 +76,7 @@ const addMovie = (movie) =>{
 }
   return (
     <div className='App'>
+      <Navbar />
       <h1>Movie list</h1>
     
     <MovieForm addMovie={addMovie}/>
