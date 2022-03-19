@@ -75,43 +75,45 @@ const addMovie = (movie) =>{
   // console.log(movieTitle,movieYear);
 }
   return (
-    <div className='App'>
-      <Navbar />
-      <h1>Movie list</h1>
-    
-    <MovieForm addMovie={addMovie}/>
-      {renderMovies}
-      {/* <h1>Dongjaeda</h1>
-      <div>
-        {renderCondition}
-      </div>
-    
-      <button onClick={toggle}>Toggle</button> */}
-      {/* <form onSubmit={(e)=>{
-        e.preventDefault();
-      }}>
-
+    <Router>
+      <div className='App'>
+        <Navbar />
+        <h1>Movie list</h1>
       
-      <input 
-        placeholder='Username' 
-        value={username} 
-        onChange={(e)=>{
-          setUsername(e.target.value);
-        }}/> <br />
-      <input 
-        placeholder='Password' 
-        value={password}
-        onChange={(e)=>{
-          setPassword(e.target.value);
-        }}
-        />
-         <br />
-      <button type='submit'>Login</button>
+      <MovieForm addMovie={addMovie}/>
+        {renderMovies}
+        {/* <h1>Dongjaeda</h1>
+        <div>
+          {renderCondition}
+        </div>
+      
+        <button onClick={toggle}>Toggle</button> */}
+        {/* <form onSubmit={(e)=>{
+          e.preventDefault();
+        }}>
 
-      </form> */}
+        
+        <input 
+          placeholder='Username' 
+          value={username} 
+          onChange={(e)=>{
+            setUsername(e.target.value);
+          }}/> <br />
+        <input 
+          placeholder='Password' 
+          value={password}
+          onChange={(e)=>{
+            setPassword(e.target.value);
+          }}
+          />
+          <br />
+        <button type='submit'>Login</button>
+
+        </form> */}
 
 
-    </div>
+     </div>
+    </Router>
   );
 }
 
