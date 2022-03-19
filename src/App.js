@@ -80,22 +80,27 @@ const addMovie = (movie) =>{
     <Router>
       <div className='App'>
         <Navbar />
-        <Switch>
-          <Route path="/movies"> 
-            <h1>Movie list</h1>
-        
-            <MovieForm addMovie={addMovie}/>
-            {renderMovies}
-          </Route>
-          <Route path="/" exact>
+        <div className='container'>
+          {/* 나는 그냥 container라는 클래스 넣어줬을 뿐인데 
+            내부 자식들이 정렬되었다. 부트스트랩 때문인가봄
+          */}
+          <Switch>
+            <Route path="/movies"> 
+              <h1>Movie list</h1>
           
-          <h1>Home</h1>
-        </Route>
-          <Route path="/users">
-            <Users />
+              <MovieForm addMovie={addMovie}/>
+              {renderMovies}
+            </Route>
+            <Route path="/" exact>
+            
+            <h1>Home</h1>
           </Route>
-        
-        </Switch>
+            <Route path="/users">
+              <Users />
+            </Route>
+          
+          </Switch>
+        </div>
         {/* <h1>Dongjaeda</h1>
         <div>
           {renderCondition}
