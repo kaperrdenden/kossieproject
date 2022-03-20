@@ -4,7 +4,8 @@ import Movie from './components/Movie';
 import MovieForm from './components/MovieForm';
 import Navbar from './components/Navbar';
 import Users from './components/pages/Users';
-
+import Home from './components/pages/Home';
+import Movies from './components/pages/Movies';
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,69 +14,11 @@ import {
 } from 'react-router-dom';
 
 
+
 function App() {
  
-  const [movies, setMovies] = useState( [
- 
-  ]);
-  useEffect(()=>{
-    console.log("render");
-  })
-  const removeMovie = (id) =>{
-    setMovies( movies.filter((movie)=>{
-      return id !== movie.id;
-    }));
-    // d
-    // const coppiedArray = [...movies];
-    // for (let i=0; i<movies.length; i++){
-    //   if (movies[i].id==id){
-    //     coppiedArray.splice(i, 1);
-    //   }
-    // }
-    // setMovies(coppiedArray);
-  }
-  const renderMovies = movies.length ? movies.map(movie =>{
-    return(
-      <Movie 
-          movie={movie}
-          removeMovie={removeMovie}
-          key={movie.id} />
-    )
-  }) 
-  : '추가된 영화 없음';
-  // const [condition, setCondition] = useState(false);
-  // const toggle = () => {
-  //   setCondition(!condition);
-  // }
-  // useEffect(()=>{
-  //   console.log(condition)
-  // },[condition])
-  // const renderCondition = condition 
-  // ? 'true'
-  // : 'False'
 
-  // const [buttonName, setButtonname]=useState('클릭');
-  // const clickButton = ()=>{
-  //   setButtonname('click');
-  // }
-// const [movieTitle,setMovieTitle] = useState('');
-// const [movieYear,setMovieYear] = useState('');
-// state를 따로 빼놓지 않고 관리했을 경우
-// return 내부에 있는 것들은 JSX. html, js도 아니다.        
-  // const [username, setUsername] = useState('');
-  // const [password, setPassword] = useState('');
-  // const onSubmit = ()=>{
-  //   alert('submitted');
-  // }
-const addMovie = (movie) =>{
-  // e.preventDefault();
-  setMovies([
-    ...movies, 
-    movie,
-  ])
-    
-  // console.log(movieTitle,movieYear);
-}
+  
   return (
     <Router>
       <div className='App'>
@@ -86,14 +29,10 @@ const addMovie = (movie) =>{
           */}
           <Switch>
             <Route path="/movies"> 
-              <h1>Movie list</h1>
-          
-              <MovieForm addMovie={addMovie}/>
-              {renderMovies}
+              <Movies />
             </Route>
             <Route path="/" exact>
-            
-            <h1>Home</h1>
+            <Home />
           </Route>
             <Route path="/users">
               <Users />
