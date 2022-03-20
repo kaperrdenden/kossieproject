@@ -3,9 +3,7 @@ import Counter from './components/Counter';
 import Movie from './components/Movie';
 import MovieForm from './components/MovieForm';
 import Navbar from './components/Navbar';
-import Users from './components/pages/Users';
-import Home from './components/pages/Home';
-import Movies from './components/pages/Movies';
+import routes from './routes';
 import {
     BrowserRouter as Router,
     Switch,
@@ -28,15 +26,23 @@ function App() {
             내부 자식들이 정렬되었다. 부트스트랩 때문인가봄
           */}
           <Switch>
-            <Route path="/movies"> 
+            {routes.map(route => {
+              return (
+                <Route key={route.path} path={route.path} exact> 
+                  <route.component />
+               </Route>
+              )
+            })}
+
+            {/* <Route path="/movies" exact> 
               <Movies />
             </Route>
             <Route path="/" exact>
             <Home />
           </Route>
-            <Route path="/users">
+            <Route path="/users" exact>
               <Users />
-            </Route>
+            </Route>  */}
           
           </Switch>
         </div>
