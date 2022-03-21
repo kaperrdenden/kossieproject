@@ -26,11 +26,14 @@ function App() {
             내부 자식들이 정렬되었다. 부트스트랩 때문인가봄
           */}
           <Switch>
+
             {routes.map(route => {
               return (
+
                 <Route key={route.path} path={route.path} exact> 
                   <route.component />
                </Route>
+               
               )
             })}
 
