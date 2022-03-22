@@ -23,10 +23,13 @@ const Movies = () => {
       }
     const renderMovies = movies.length ? movies.map(movie =>{
         return(
-          <Movie 
-              movie={movie}
-              removeMovie={removeMovie}
-              key={movie.id} />
+            <div key={movie.id}>
+            <Movie 
+                movie={movie}
+                removeMovie={removeMovie}
+                key={movie.id} />
+            <button>전체삭제</button>
+          </div>
         )
       }) 
       : '추가된 영화 없음';
@@ -72,6 +75,7 @@ const Movies = () => {
             movies={movies}
             />
           {renderMovies}
+         
         </>
     )
   

@@ -92,7 +92,10 @@ const MovieForm = (props) => {
                     onChange={e => setMovieYear(e.target.value)}
                     /><br />
                     <div style={{color: 'red'}}>{yearError}</div> */}
-                    <button>영화추가</button>
+                    <div className="movieform-buttons">
+                        <button>영화추가</button>
+                        
+                    </div>
             </form>
         </div>
   );
