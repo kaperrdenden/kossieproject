@@ -14,7 +14,7 @@ const User = () => {
             setUser(response.data);
             setLoading(false);
             // 로딩이 끝나면 false로 바꾸어 주는거
-        });
+        },[]);
 
     },)
     const userDetail = loading ? <Spinner /> 
