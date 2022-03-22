@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import InputField from "./InputField";
+import Movies from "./pages/Movies";
 
 const MovieForm = (props) => {
     const [movieTitle, setMovieTitle] = useState('');
@@ -32,6 +33,14 @@ const resetErrors = () => {
 
 const onSubmit = (e) =>{
   e.preventDefault();
+  for (let i=0; i<props.movies.length; i++){
+      if (props.movies[0].title === movieTitle){
+          alert('이미 존재하는 영화입니다.');
+          return;
+      }
+    
+  }
+  console.log('her');
   if (validateForm()){
     props.addMovie({
         id:Date.now(),
