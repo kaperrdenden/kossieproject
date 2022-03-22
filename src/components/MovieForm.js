@@ -7,7 +7,7 @@ const MovieForm = (props) => {
     const [movieYear, setMovieYear] = useState('');
     const [titleError, setTitleError] = useState('');
     const [yearError, setYearError] = useState(''); 
-    const titleInput = useRef();
+ 
     const resetForm = () => {
         setMovieTitle('');
         setMovieYear('');
@@ -51,7 +51,7 @@ const MovieForm = (props) => {
         })
         resetErrors();
         resetForm();
-        titleInput.current.focus();
+        
         // 영화가 추가될 때만 reset을할 수있게 한다.
     }
     
@@ -75,7 +75,7 @@ const MovieForm = (props) => {
                     placeholder="영화제목"
                     onChange={ e => setMovieTitle(e.target.value) }
                     errorMessage={titleError}
-                    ref={titleInput}
+                    
                 />
                 
                 <InputField 
