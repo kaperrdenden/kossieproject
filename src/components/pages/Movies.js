@@ -21,6 +21,9 @@ const Movies = () => {
         // }
         // setMovies(coppiedArray);
       }
+    const removeAllMovies = () =>{ 
+        setMovies([]);
+    } 
     const renderMovies = movies.length ? movies.map(movie =>{
         return(
             <div key={movie.id}>
@@ -28,7 +31,7 @@ const Movies = () => {
                 movie={movie}
                 removeMovie={removeMovie}
                 key={movie.id} />
-            <button>전체삭제</button>
+            <button onClick={removeAllMovies}>전체삭제</button>
           </div>
         )
       }) 
