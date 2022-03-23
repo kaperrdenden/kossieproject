@@ -23,7 +23,7 @@ const Users = () => {
            {loading
             ? <Spinner />
             :  <UserList users={users} />
-        }
+          }
          
             </>
         )
