@@ -10,9 +10,11 @@ const Counter = (props) => {
     // props.click 에 값이 없으면 || 뒤에 오는 'CLick'이 반환된다.
       return (
         
-          <button onClick={increment}>
+          <button 
+            onClick={increment}>
             {clickString}
-            Click {count} </button>
+            Click {count} 
+          </button>
         
       );
 };

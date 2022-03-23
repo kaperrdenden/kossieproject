@@ -20,9 +20,9 @@ const Users = () => {
     return(
         <>
             <h1>users1</h1>
-           {loading
+            {loading
             ? <Spinner />
-            :  <UserList users={users} />
+            : <UserList users={users} />
           }
          
             </>
