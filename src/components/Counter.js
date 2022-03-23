@@ -11,9 +11,10 @@ const Counter = (props) => {
       return (
         
           <button 
-            onClick={increment}>
-            {clickString}
-            Click {count} 
+            onClick={increment}
+          >
+              {clickString}
+              Click {count} 
           </button>
         
       );
