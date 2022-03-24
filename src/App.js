@@ -8,7 +8,6 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-     
 } from 'react-router-dom';
 
 
@@ -33,7 +32,7 @@ function App() {
                 <Route key={route.path} path={route.path} exact> 
                   <route.component />
                </Route>
-               
+
               )
             })}
 

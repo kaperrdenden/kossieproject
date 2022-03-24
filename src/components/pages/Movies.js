@@ -32,7 +32,7 @@ const Movies = () => {
                     movie={movie}
                     removeMovie={removeMovie}
                     key={movie.id} />
-                <button onClick={removeAllMovies}>전체삭제</button>
+           
             </div>
         )
       }) 
@@ -79,7 +79,10 @@ const Movies = () => {
             movies={movies}
             />
           {renderMovies}
-         
+         {movies.length > 0 
+         ? (     <button onClick={removeAllMovies}>전체삭제</button>)
+         : null 
+        }
         </>
     )
   
