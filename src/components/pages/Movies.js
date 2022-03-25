@@ -5,9 +5,7 @@ import MovieForm from "../MovieForm";
 
 const Movies = () => {
     const [movies, setMovies] = useState( [
- 
     ]);
-
     const removeMovie = (id) =>{
         setMovies( movies.filter((movie)=>{
           return id !== movie.id;
@@ -72,8 +70,7 @@ const Movies = () => {
     }
     return(
         <>
-          <h1>Movie list</h1>
-          
+          <h1>Movie list</h1>    
           <MovieForm
             addMovie={addMovie}
             movies={movies}
