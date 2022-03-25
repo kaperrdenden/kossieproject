@@ -76,7 +76,7 @@ const Movies = () => {
             movies={movies}
             />
           {renderMovies}
-         {movies.length > 0 
+          {movies.length > 0 
          ? (     <button onClick={removeAllMovies}>전체삭제</button>)
          : null 
         }

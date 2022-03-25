@@ -4,7 +4,6 @@ const UserList = ({users}) => {
     
     return(
         <div>
-            
             {users.map(user => {
                 return (
                     <Link className="card mb-2" to={`/users/${user.id}`}  key={user.id}>  
